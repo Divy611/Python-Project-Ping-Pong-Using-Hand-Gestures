@@ -1,17 +1,17 @@
-from turtle import speed
 import cv2
 import cvzone
 import numpy
 from cvzone.HandTrackingModule import HandDetector
+from turtle import speed
 cp=cvzone.VideoCapture(0)
 cp.set(3,1280)
 cp.set(4,720)
 dtr=HandDetector(detectionCon=0.8,maxHands=2)
-imgbg=cv2.imread('')
-bllimg=cv2.imread('',cv2.IMREAD_UNCHANGED)
-goimg=cv2.imread('')
-p1img=cv2.imread('',cv2.IMREAD_UNCHANGED)
-p2img=cv2.imread('',cv2.IMREAD_UNCHANGED)
+imgbg=cv2.imread('***Image Directory Here***')                        #Background Image
+bllimg=cv2.imread('***Image Directory Here***',cv2.IMREAD_UNCHANGED)  #Ball Image
+goimg=cv2.imread('***Image Directory Here***')                        #'Game Over' Image
+p1img=cv2.imread('***Image Directory Here***',cv2.IMREAD_UNCHANGED)   #Taking bat 1 as p1
+p2img=cv2.imread('***Image Directory Here***',cv2.IMREAD_UNCHANGED)   #Taking bat 2 as p2
 blpos=[100,100]
 speedX=15
 speedY=15
@@ -63,4 +63,4 @@ while True:
         speedY=15
         gameOver=False
         score=[0,0]
-        goimg=cv2.imread('')
+        goimg=cv2.imread('***Image Directory Here***')
